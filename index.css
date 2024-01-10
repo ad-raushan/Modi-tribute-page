@@ -1,0 +1,87 @@
+*{
+    font-family:  "lato",sans-serif;
+}
+::selection{
+    color: crimson;
+    background: rgb(0, 255, 255);
+}
+h1{
+    text-align: center;
+    padding: 1.25%;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+}
+.card {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+    width: 60%;
+    height:max-content;
+    overflow: hidden;
+    transition: transform 0.7s, filter 1s;
+    border-radius: 50%;
+}
+
+.card:hover {
+    filter: blur(3px);
+    filter: blur(0); /* Set to 0 to remove blur on hover */
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 50%; */
+}
+
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(75, 75, 75, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card .overlay-text {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 18px;
+}
+
+ul{
+    list-style-type: '🚩';
+}
+
+li{
+    padding: 1.25%;
+}
+
+#outer-link{
+    text-align: center;
+}
+
+#outer-actual-link:hover{
+    color: rgb(179, 0, 0);
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
